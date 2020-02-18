@@ -31,21 +31,14 @@
 
 <p10><br />Our understanding of the health effects of air pollution has risen dramatically in the past five or 10 years, largely because of an alarming series of findings on the harm caused by pollutant exposure. Given the recent findings, the Carnegie Mellon researchers say, the decline in federal enforcement “is concerning in light of the increases in air pollution” that have occurred since 2016.<br /></p10>
 
+<div id="success"></div>
+<script>
+$( "#success" ).load("ajax/data.html");
+</script>
+
+
 <script type="text/javascript">
 $(document).ready(function(){
-//   var ip = '134.201.250.155'
-//   var access_key = '56027a224bf0a221932a8f9b5c56738b';
-//   $.ajax({
-//
-//     url: 'https://api.ipstack.com/' + ip + '?access_key=' + access_key,
-//     dataType: 'jsonp',
-//     success: function(json) {
-//
-//         // output the "capital" object inside "location"
-//         alert(json.location.capital);
-//
-//     }
-// });
 var ip = 'check'
 var access_key = '56027a224bf0a221932a8f9b5c56738b';
 
@@ -53,11 +46,17 @@ var access_key = '56027a224bf0a221932a8f9b5c56738b';
 $.ajax({
     url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
     dataType: 'jsonp',
-    success: function(json) {
+    success: function(json1) {
 
-        // output the "capital" object inside "location"
-        alert(json.zip);
-
+      $.ajax({
+          url: json1.zip + '.js',
+          dataType: 'jsonp',
+          success: function(json2) {
+            alert(json2.localized)
+          }
+        });
+        alert(json1.zip)
+        //alert(z);
     }
 });
 //104.244.243.114
