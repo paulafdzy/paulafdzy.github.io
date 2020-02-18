@@ -48,11 +48,11 @@ var zipcode = '60201'
      dataType: 'jsonp',
      success: function(json1) {
        $.ajax({
-         url: '/practicejson.json',
+         url: '/'+ json1.region_code +'.json',
          context: document.body
        }).done(function(d) {
          console.log("done")
-         alert(d.Cook + 'your zip code is ' + json1.zip)
+         alert('Localized Version: ' + d.Cook)
        });
        //alert('Your state is ' + json1.region_code + ' your zip code is ' + json1.zip + ' we are working on fetching your data.')
      }
