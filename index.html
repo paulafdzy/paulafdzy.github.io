@@ -31,10 +31,7 @@
 
 <p10><br />Our understanding of the health effects of air pollution has risen dramatically in the past five or 10 years, largely because of an alarming series of findings on the harm caused by pollutant exposure. Given the recent findings, the Carnegie Mellon researchers say, the decline in federal enforcement “is concerning in light of the increases in air pollution” that have occurred since 2016.<br /></p10>
 
-<div id="success"></div>
-<script>
-$( "#success" ).load("ajax/data.html");
-</script>
+
 
 
 <script type="text/javascript">
@@ -49,17 +46,16 @@ $.ajax({
     success: function(json1) {
 
       $.ajax({
-          url: json1.zip + '.js',
+          url: json1.region_code + '.json',
           dataType: 'jsonp',
           success: function(json2) {
-            alert(json2.localized)
+            alert(json2.60201)
           }
         });
         alert(json1.zip)
         //alert(z);
     }
 });
-//104.244.243.114
 
 });
 
