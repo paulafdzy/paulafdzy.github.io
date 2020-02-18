@@ -54,13 +54,13 @@ $.ajax({
 
 ////part not working
 
-// $.ajax({
-//     url: 'https://github.com/paulafdzy/paulafdzy.github.io/blob/master/IL.js',
-//     dataType: 'jsonp',
-//     success: function(json2) {
-//       alert('this works');
-//     }
-//   });
+ $.ajax({
+     url: 'https://github.com/paulafdzy/paulafdzy.github.io/blob/master/IL.json',
+     dataType: 'jsonp',
+     success: function(json2) {
+       alert(json2.60201);
+     }
+   });
 
 // $("#driver").click(function(event){
 //                $.getJSON('60201.json', function(jd) {
