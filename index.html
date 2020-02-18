@@ -6,6 +6,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
   </script>
 
+
+
+
 </head>
 <body>
 
@@ -31,9 +34,6 @@
 
 <p10><br />Our understanding of the health effects of air pollution has risen dramatically in the past five or 10 years, largely because of an alarming series of findings on the harm caused by pollutant exposure. Given the recent findings, the Carnegie Mellon researchers say, the decline in federal enforcement “is concerning in light of the increases in air pollution” that have occurred since 2016.<br /></p10>
 
-
-
-
 <script type="text/javascript">
 $(document).ready(function(){
 var ip = 'check'
@@ -44,19 +44,31 @@ $.ajax({
     url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
     dataType: 'jsonp',
     success: function(json1) {
+      alert('Your state is ' + json1.region_code + ' your zip code is ' + json1.zip + ' we are working on fetching your data.')
 
-      $.ajax({
-          url: json1.region_code + '.json',
-          dataType: 'jsonp',
-          success: function(json2) {
-            alert(json2.60201)
-          }
-        });
-        alert(json1.zip)
+
+      //  alert(json1.region_code)
         //alert(z);
     }
 });
 
+////part not working
+
+// $.ajax({
+//     url: 'https://github.com/paulafdzy/paulafdzy.github.io/blob/master/IL.js',
+//     dataType: 'jsonp',
+//     success: function(json2) {
+//       alert('this works');
+//     }
+//   });
+
+// $("#driver").click(function(event){
+//                $.getJSON('60201.json', function(jd) {
+//                   $('#stage').html('<p> Name: ' + jd.name + '</p>');
+//                   $('#stage').append('<p>Age : ' + jd.age+ '</p>');
+//                   $('#stage').append('<p> Sex: ' + jd.sex+ '</p>');
+//                });
+        //    });
 });
 
 </script>
