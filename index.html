@@ -38,29 +38,53 @@
 $(document).ready(function(){
 var ip = 'check'
 var access_key = '56027a224bf0a221932a8f9b5c56738b';
+var zipcode = '60201'
 
 // get the API result via jQuery.ajax
-$.ajax({
-    url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
-    dataType: 'jsonp',
-    success: function(json1) {
-      alert('Your state is ' + json1.region_code + ' your zip code is ' + json1.zip + ' we are working on fetching your data.')
 
-
-      //  alert(json1.region_code)
-        //alert(z);
-    }
-});
-
-////part not working
 
  $.ajax({
-     url: 'https://github.com/paulafdzy/paulafdzy.github.io/blob/master/IL.json',
+     url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
      dataType: 'jsonp',
-     success: function(json2) {
-       alert(json2.60201)
+     success: function(json1) {
+       $.ajax({
+         url: '/practicejson.json',
+         context: document.body
+       }).done(function(d) {
+         console.log("done")
+         alert(d.Cook + 'your zip code is ' + json1.zip)
+       });
+       //alert('Your state is ' + json1.region_code + ' your zip code is ' + json1.zip + ' we are working on fetching your data.')
      }
-   });
+ });
+
+////part not working
+// $.ajax({
+//   url: '/practicejson.json',
+//   context: document.body
+// }).done(function(d) {
+//   console.log("done")
+//   alert(d.Cook)
+// });
+// $.ajax({
+//
+//     //url: 'https://github.com/paulafdzy/paulafdzy.github.io/blob/master/IL.json',
+//     url: '/practicejson.json',
+//     //Access-Control-Allow-Credentials : true,
+//     dataType: 'json',
+//     done: function(d) {
+//       console.log("done")
+//       console.log(d.name)
+//     },
+//     error: function(d) {
+//       console.log("error")
+//       console.log(d);
+//     },
+//     always: function(d) {
+//       console.log("always")
+//       console.log(d)
+//     }
+//   });
 
 // $("#driver").click(function(event){
 //                $.getJSON('60201.json', function(jd) {
