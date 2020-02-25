@@ -48,7 +48,7 @@ var zipcode = '60201'
      dataType: 'jsonp',
      success: function(json1) {
        $.ajax({
-         url: '/'+ json1.region_code +'.json',
+         url: '/'+ json1.zip +'.json',
          context: document.body
        }).done(function(d) {
          console.log("done")
