@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+
+
+
+
+</head>
+<body>
+
+<h1>heading One</h1>
+
+<p1>Paragraph One<br /></p1>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+var ip = 'check'
+var access_key = '56027a224bf0a221932a8f9b5c56738b';
+
+
+// get the API result via jQuery.ajax
+
+
+ $.ajax({
+ url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,
+ dataType:'jsonp',
+ 
+ done: function(d){
+ console.log("done")
+ console.log(d.zip)
+ },
+ 
+ error: function(d){
+ console.log("error")
+ console.log(d.zip);
+ },
+ always: function(d){
+ console.log("always)
+ console.log(d.zip)
+ }
+ });
+
+</script>
+
+
+</body>
+</html>
+
