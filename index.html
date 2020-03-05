@@ -38,7 +38,7 @@
 $(document).ready(function(){
 var ip = 'check'
 var access_key = '56027a224bf0a221932a8f9b5c56738b';
-var zipcode = '60201'
+
 
 // get the API result via jQuery.ajax
 
@@ -48,14 +48,25 @@ var zipcode = '60201'
      dataType: 'jsonp',
      success: function(json1) {
        $.ajax({
-         url: '/'+ json1.zip +'.json',
-         context: document.body
-       }).done(function(d) {
-         console.log("done")
-         alert('Localized Version: ' + d.Title + d.Text)
-       });
-       //alert('Your state is ' + json1.region_code + ' your zip code is ' + json1.zip + ' we are working on fetching your data.')
-     }
+         url: '/z_to_f.json',
+         dataType: 'jsonp',
+         success: function(jsonlist){
+           for(var i = 0; i < jsonlist.length; i++) {
+             var obj = json[i];
+             if(obj.ZIP == json1.zip){
+               $.ajax({
+                 url: '/'+ obj.STCOUNTYFP +'.json',
+                 context: document.body
+               }).done(function(d) {
+                 console.log("done")
+                 alert('Localized Version: ' + d.Text)
+               });
+             }
+           }
+
+         }
+       })
+       }
  });
 
 ////part not working
