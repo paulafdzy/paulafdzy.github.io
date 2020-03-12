@@ -1,0 +1,160 @@
+body{
+	margin-top: 20px; 
+	margin-bottom: 30px;
+	overflow-x: hidden;
+}
+
+nav{
+	float: center;
+	position: relative;
+	margin-left: 10%
+}
+
+.topbar{
+	background-color: #141619;
+	margin-right: -1rem;
+	margin-left: -1rem;
+	margin-top: -1rem;
+	padding: 10px;
+	margin-bottom: 20px;
+	height: 40px;
+	overflow: hidden;
+}
+
+.topbar a {
+  float: left;
+  color: white;
+  padding: 10px 70px;
+  font-family: arial;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topbar a:hover {
+  background-color: #686d75;
+  color: white;
+}
+
+.topbar a.active {
+  background-color: #686d75;
+  color: white;
+}
+
+.signin{
+	position: relative;
+	float: right;
+}
+
+header{
+	margin-left: 70px
+}
+
+h1{
+	font-family: didot; 
+	font-style: bold; 
+	font-size: 50px;
+	margin-bottom: 10px
+}
+
+h2{
+	font-family: helvetica neue; 
+	font-weight: 300; 
+	font-size: 20px; 
+	margin-top: 0px;
+	color: #616263
+}
+
+h3{
+	font-size: 17px;
+	font-family: helvetica neue;
+}
+
+h4{
+	font-size: 12px;
+	font-family: helvetica neue;
+	font-weight: 400;
+}
+
+h5{
+	margin-left: 70px;
+	font-family: arial;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 1000;
+	color: #005cca;
+	margin-bottom: 10px
+}
+
+p{
+	font-family: times;
+	font-size: 22px;
+	font-weight: 300;
+	font-stretch: expanded;
+	margin-right: 500px;
+	margin-left: 70px;
+}
+
+hr{
+	border-top: 0.2px;
+	margin-left: 70px;
+}
+
+.local{
+	margin-bottom: 20px; 
+	margin-right: 550px;
+}
+
+.localbox{
+	background-color: #e8e8e8;
+	margin-right: -1rem;
+	margin-left: -1rem;
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.ui-tooltip, .arrow{
+    background: black;
+    border: 2px solid white;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top{
+    bottom: -20px;
+    top: auto;
+  }
