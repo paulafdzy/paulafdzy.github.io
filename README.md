@@ -1,3 +1,1 @@
-# paulafdzy.github.io
-for a complete guide see:
-https://docs.google.com/document/d/1oI-yWsfocoZrDRnbKvdW5w9ZIh_OL49lTuGSYYOzBD8/edit
+News Localization Engine complex prototype for an article about air pollution
