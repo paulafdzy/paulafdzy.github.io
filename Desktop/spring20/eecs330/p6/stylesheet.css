@@ -1,0 +1,118 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+
+
+.description {
+  font-style: italic;
+  font-family: Times New Roman;
+  font-size: 18px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-family: Times New Roman;
+}
+
+.info {
+  font-size: 18px;
+  font-family: Times New Roman;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-family: Times New Roman;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#mybio{
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+
+#text {
+	grid-column: 1/ span 1;
+  font-weight: bold;
+
+  padding-left: 25px;
+}
+
+#text h1 {
+  margin-bottom: none;
+  margin-top: none;
+  padding-bottom: none;
+  padding-top: none;
+  text-decoration: underline;
+  font-size: 40px;
+}
+
+#text p {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+#me {
+  grid-column: 2/ span 1;
+}
+
+img {
+  height: 500px;
+  padding-top: 25px;
+}
+
+h2 {
+  font-size:25px;
+  font-weight: bold;
+}
+
+.landing img {
+  height: 300px;
+}
+
+.contact{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.contact p:hover{
+  color: purple;
+}
+
+.project1 {
+  font-family: Georgia;
+}
+
+.project2 {
+  font-family: Georgia;
+}
